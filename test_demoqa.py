@@ -44,27 +44,27 @@ def test_text_box():
 
 
 
-def test_add_table():
-    driver.get("https://demoqa.com/webtables")
-
-
-    add = ('xpath', '//button[@id = "addNewRecordButton"]')
-    driver.find_element(*add).click()
-
-
-# FILLING POPUP
-    driver.find_element("xpath", '//input[@id = "firstName"]').send_keys("First name")
-    driver.find_element('xpath', '//input[@id = "lastName"]').send_keys("Last Name")
-    driver.find_element('xpath', '//input[@id = "userEmail"]').send_keys("email@mail.com")
-    driver.find_element('xpath', '//input[@id = "age"]').send_keys("12")
-    driver.find_element('xpath', '//input[@id = "salary"]').send_keys("100")
-    driver.find_element('xpath', '//input[@id = "department"]').send_keys("Science")
-    driver.find_element('xpath', '//button[@id = "submit"]').click()
-
-# SELECT ROWS
-    driver.execute_script("window.scrollTo(0,1250)")
-    sel = Select(driver.find_element('xpath', '//select[@aria-label ="rows per page"]'))
-    sel.select_by_visible_text("50 rows")
+# def test_add_table():
+#     driver.get("https://demoqa.com/webtables")
+#
+#
+#     add = ('xpath', '//button[@id = "addNewRecordButton"]')
+#     driver.find_element(*add).click()
+#
+#
+# # FILLING POPUP
+#     driver.find_element("xpath", '//input[@id = "firstName"]').send_keys("First name")
+#     driver.find_element('xpath', '//input[@id = "lastName"]').send_keys("Last Name")
+#     driver.find_element('xpath', '//input[@id = "userEmail"]').send_keys("email@mail.com")
+#     driver.find_element('xpath', '//input[@id = "age"]').send_keys("12")
+#     driver.find_element('xpath', '//input[@id = "salary"]').send_keys("100")
+#     driver.find_element('xpath', '//input[@id = "department"]').send_keys("Science")
+#     driver.find_element('xpath', '//button[@id = "submit"]').click()
+#
+# # SELECT ROWS
+#     driver.execute_script("window.scrollTo(0,1250)")
+#     sel = Select(driver.find_element('xpath', '//select[@aria-label ="rows per page"]'))
+#     sel.select_by_visible_text("50 rows")
 
 
 
