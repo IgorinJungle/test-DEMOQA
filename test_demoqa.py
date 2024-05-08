@@ -12,7 +12,7 @@ from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.support.select import Select
 
 options = webdriver.FirefoxOptions()
-# options.add_argument("--headless")
+options.add_argument("--headless")
 # options.add_argument("--disable-cache")
 
 service = Service(executable_path=GeckoDriverManager().install())
