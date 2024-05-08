@@ -13,7 +13,7 @@ jobs:
         with:
           python-version: '3.11.2'
       - name: Google
-        run: sudo apt-get install firefox-stable
+        run: sudo apt-get install google-chrome-stable
       - name: requirements
         run: pip install -r requirements.txt
       - name: Run test
