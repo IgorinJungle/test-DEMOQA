@@ -25,6 +25,7 @@ action = ActionChains(driver)
 def test_text_box():
     driver.get("https://demoqa.com/text-box")
 
+
     name = ("xpath", '//input[@id ="userName"]')
     email = ('xpath', '//input[@id ="userEmail"]')
     adres = ('xpath', '//textarea[@id ="currentAddress"]')
@@ -36,6 +37,7 @@ def test_text_box():
     driver.find_element(*email).send_keys("igor01@gmail.com")
     driver.find_element(*adres).send_keys("Moscow, Bolshaya Nikitskaya, Dom 13, kv 154")
     driver.find_element(*permanentAddr).send_keys("Moscow, Bolshaya Nikitskaya, Dom 13, kv 154")
+    driver.execute_script("window.scrollTo(0,1200)")
     driver.find_element(*submit_button).click()
 
 
